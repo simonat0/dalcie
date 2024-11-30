@@ -3,36 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Um espacinho na web</title>
+  <title>O nosso lugar na web</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Título -->
   <header class="hero">
-    <h1>Um espacinho na web só pra chamar de nosso</h1>
+    <h1>Um espacinho na web só pra chamar de nosso 🏠</h1>
+    <i>Queria ter feito uma coisa mais legal mas não conseguia ficar longe de ti para fazer.</i>
+    <!-- <img src="assets/img_01.jpeg" alt="Foto 1" style="max-width: 50%;"> -->
+    <div class="poetry-box">
+      <p id="poetry-text">O que eu sinto por você deve ser motorista, porque passageiro não é</p>
+      <button id="speak-button">Ouvir Poesia</button>
+    </div>      
   </header>
 
-  <!-- Sessão de Texto -->
-  <section class="about">
-    <h2>Meus 10 motivos</h2>
-    <p>
-      Amo o jeito que você se empolga para ouvir as histórias das pessoas, sempre com tanta atenção e curiosidade. 
-      Você tem uma paixão linda por musicais e filmes de romance, que torna cada momento com você mais mágico. 
-      E o seu jeito de usar as palavras... ah, como elas conseguem expressar tanto carinho e amor por todos ao seu redor. 
-      Você tem um coração enorme e uma capacidade única de fazer as pessoas se sentirem especiais.
-    </p>
+  <section class="reasons">
+    <h2>Meus 10 motivos 💕</h2>
+    <ul>
+      <li>Seu jeito único de se empolgar ao ouvir as histórias das pessoas, sempre com tanto carinho e atenção.</li>
+      <li>Seu amor por musicais e filmes de romance, que faz o mundo parecer mais mágico ao seu lado.</li>
+      <li>Como você utiliza palavras para expressar tanto amor e cuidado por quem está à sua volta.</li>
+      <li>Seu sorriso iluminado, que consegue transformar até os dias mais difíceis em algo especial.</li>
+      <li>O brilho nos seus olhos quando você fala sobre algo que ama.</li>
+      <li>A forma como você sempre encontra tempo para apoiar e cuidar das pessoas que são importantes para você.</li>
+      <li>Seu abraço aconchegante, que é como um porto seguro.</li>
+      <li>Seu senso de humor, que consegue arrancar risadas mesmo nos momentos mais improváveis.</li>
+      <li>Seu jeito de transformar pequenas coisas em memórias inesquecíveis.</li>
+      <li>O simples fato de você existir e tornar o mundo um lugar melhor só por estar nele.</li>
+    </ul>
   </section>
 
   <!-- Mural de Fotos -->
   <section class="photo-gallery">
     <h2>Nossos Momentos</h2>
     <div class="gallery">
-      <img src="https://via.placeholder.com/300x300" alt="Foto 1">
-      <img src="https://via.placeholder.com/300x400" alt="Foto 2">
-      <img src="https://via.placeholder.com/300x250" alt="Foto 3">
-      <img src="https://via.placeholder.com/300x350" alt="Foto 4">
-      <img src="https://via.placeholder.com/300x300" alt="Foto 5">
+      <img src="assets/img_02.jpeg" alt="Foto 2">
+      <img src="assets/img_03.jpeg" alt="Foto 3">
+      <img src="assets/img_04.jpeg" alt="Foto 4">
+      <img src="assets/img_05.jpeg" alt="Foto 5">
     </div>
   </section>
+  <script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-89e51eb0-9bd0-4a31-a0e7-54fcb8e5958e" data-elfsight-app-lazy></div>
+<script>
+  const cantadas = [
+  "Se você fosse um sorvete, faria questão de ser sua cobertura.",
+  "Existe um shampoo ótimo para tirar o ex da cabeça, o nome é euserve (elseve).",
+  "Não sou câmera digital, mas meu foco é em você.",
+  "Você faz aniversário todo dia? Tá sempre de parabéns.",
+  "Me chama de video game e me joga no sofá.",
+  "eu não sou bússola, mas você me fez perder o norte.",
+  "Você já cometeu tantos erros na vida, por que não comete mais um? Eu.",
+  "Me chama de previsão do tempo e diz que tá rolando um clima.",
+  "Se você fosse um fogão, faria questão de beijar todas as suas bocas.",
+  "Você conhece a gi? A gigantesca vontade que tenho de te beijar.",
+  "Me chama de água e me deixa acabar com sua seca!",
+  "Pode me chamar de fritura, afinal, só tenho óleos para você",
+  "Me chama de lente, só para gente manter um contato!",
+  "Eu não sou dinheiro, mas tenho total capacidade de te fazer feliz.",
+  "Você não é dicionário, mas traz significado para minha vida.",
+  "Me chama de TikTok e diz que fui feito For You.",
+  "Para flertar com essa deusa, posso mandar mensagem ou devo fazer uma prece?",
+  "Eu não sou Alice, mas você faz eu me sentir no País das Maravilhas.",
+  "Você é um McLanche? Porque me deixa feliz.",
+];
+
+let currentCantadaIndex = 0;
+
+document.getElementById("speak-button").addEventListener("click", () => {
+  const textElement = document.getElementById("poetry-text");
+  
+  // Atualiza o texto com a próxima cantada
+  textElement.textContent = cantadas[currentCantadaIndex];
+  
+  // Fala o texto atualizado
+  const speech = new SpeechSynthesisUtterance(cantadas[currentCantadaIndex]);
+  window.speechSynthesis.speak(speech);
+
+  // Atualiza o índice para a próxima cantada
+  currentCantadaIndex = (currentCantadaIndex + 1) % cantadas.length;
+});
+
+</script>
 </body>
 </html>

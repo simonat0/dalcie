@@ -38,36 +38,74 @@ body {
     line-height: 1.8;
     color: #555;
   }
-  
-  /* Photo Gallery Section */
-  .photo-gallery {
-    padding: 30px 20px;
-    background-color: #fdf5e6;
-    text-align: center;
+
+  .reasons {
+    padding: 16px;
   }
   
-  .photo-gallery h2 {
-    font-size: 2rem;
-    color: #ffa07a;
-    margin-bottom: 20px;
-  }
-  
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-  
+ /* Galeria de Fotos */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.gallery img {
+  max-width: calc(33% - 10px); /* Para telas maiores, mantém 3 colunas */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Ajuste para dispositivos móveis */
+@media (max-width: 768px) {
   .gallery img {
-    max-width: calc(33% - 10px);
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    max-width: calc(50% - 10px); /* Duas fotos por linha para tablets */
   }
-  
-  .gallery img:hover {
-    transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .gallery img {
+    max-width: 100%; /* Uma foto por linha para celulares */
   }
-  
+}
+
+/* Caixa de poesia */
+.poetry-box {
+  background-color: #fffaf0;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: inline-block;
+}
+
+.poetry-box p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.poetry-box button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.poetry-box button:hover {
+  background-color: #ff85c0;
+}
+
