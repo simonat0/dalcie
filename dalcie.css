@@ -1,0 +1,39 @@
+* {
+    font-family: "Kite One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #A3DAED;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 48px;
+}
+
+#timer {
+    text-align: center;
+    font-size: 28px;
+}
+
+.calendar-section {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.timer-section {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
